@@ -1,0 +1,139 @@
+.product {
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 1px 16px 3px rgba(0, 0, 0, 0.336);
+    -webkit-box-shadow: 0px 1px 16px 3px rgba(0, 0, 0, 0.233);
+    -moz-box-shadow: 0px 1px 16px 3px rgba(0, 0, 0, 0.267);
+    border:1px #eeee;
+    position: relative;
+    transition: .2s ease all;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: #fff;
+    margin: 2px;   
+}
+
+
+
+.products-container{
+    background-color: #eeee;
+    padding: 20px;
+    z-index: -1;
+    border-radius: 3px;
+}
+
+.product p{
+    min-height: 3rem;
+    margin-top: 1rem;
+    font-weight: bold;
+ 
+}
+
+.product:hover{
+    box-shadow: 0px 1px 16px 3px rgba(0, 0, 0, 0.555);
+    -webkit-box-shadow: 0px 1px 16px 3px rgba(0, 0, 0, 0.699);
+    -moz-box-shadow: 0px 1px 16px 3px rgba(0, 0, 0, 0.671);
+}
+
+
+
+.product-img {
+    height: 200px;
+    width: 100px;
+    object-fit: contain;
+
+}
+
+.product-actions {
+    background-color:var(--gray-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+    padding: 30px;
+}
+
+.product-actions h2 {
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+   
+}
+
+
+/*product info page*/
+
+.productInfo-container{
+    overflow-y: hidden;
+}
+
+.productInfo-img {
+    height: 45%;
+    
+}                                                   
+
+@media screen and (max-width:768px){
+    .productInfo-img {
+        height: 50%;
+    }
+}
+
+@media screen and (max-width:488px){
+    .productInfo-img {
+        height: 28%;
+    }
+}
+
+
+.price {
+    padding: 1px 5px;
+    display: inline-block;
+    color: #ffff;
+    background-color: rgb(11, 94, 215);
+    border-radius: 10px;
+}
+
+
+
+/*cart page*/
+.delete-icon:hover {
+    cursor: pointer;
+    color: rgba(230, 7, 7, 0.863);
+}
+
+
+
+.total-amount{
+    padding-left: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+/*Carousel component*/
+
+
+.carousel-container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+.cartSlider-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
