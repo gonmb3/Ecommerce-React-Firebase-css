@@ -109,11 +109,11 @@ const Cart = () => {
             <div className="d-flex flex-column text-end">
               <div className="d-flex flex-column ">
                 <h2 className="total-amount bg-primary  fw-light">Total a Pagar: ${Math.ceil(totalAmount)}.00 </h2>
-                <Link to="/payment">
+               
                   <button className='btn btn-success mx-1'>
                     Finalizar Compra
                   </button>
-                </Link>
+              
               </div>
 
             </div>

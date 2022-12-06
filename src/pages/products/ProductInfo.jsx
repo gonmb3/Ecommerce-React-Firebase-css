@@ -7,6 +7,7 @@ import fireDB from '../../firebaseConfig/firebase';
 import Layout from './../../components/layout/Layout';
 import { HiArrowCircleLeft } from "react-icons/hi"
 import "../../styles/products.css"
+import { useDispatch } from 'react-redux';
 
 
 
@@ -34,6 +35,12 @@ const ProductInfo = () => {
   }, []);
 
 
+  const dispatch = useDispatch();
+
+  const addToCart = (product) => {
+    dispatch({ type: "ADD_TO_CART", payload: product })
+  }
+
   return (
     <Layout loading = {loading}>     { /*Iterando info//detalles de producto */}
       {product && (
@@ -53,7 +60,9 @@ const ProductInfo = () => {
 
                   { /* Funcion  agregar al carrito de compras desde pagina info/detalles de producto*/}
                   <Link to="/">    <button className='btn btn-secondary '><HiArrowCircleLeft size={33} /> Volver</button></Link>
-                  <button className='btn btn-primary my-3'>Agregar al Carrito</button>
+                  <button
+                   onClick={() => addToCart(product)}
+                   className='btn btn-primary my-3'>Agregar al Carrito</button>
                 </div>
               </div>
             </div>

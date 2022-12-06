@@ -4,7 +4,6 @@ import Login from './pages/login - register/Login';
 import Register from './pages/login - register/Register';
 import Cart from './pages/cart/Cart';
 import ProductInfo from './pages/products/ProductInfo';
-import Payment from './pages/paymentPage/Payment';
 
 import { ToastContainer } from 'react-toastify';
 
@@ -24,7 +23,7 @@ const App = () => {
       <Route path="/register" element={<Register/>}/>
       <Route path="/productInfo/:id" element={<ProtectedRoutes> <ProductInfo/></ProtectedRoutes>}/>
       <Route path="/cart" element={<ProtectedRoutes> <Cart/> </ProtectedRoutes> }/>
-      <Route path="/payment" element={ <ProtectedRoutes> <Payment/></ProtectedRoutes> }/>
+
     </Routes>
        
     </>
